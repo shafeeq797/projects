@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>user login</title>
+        
+    </head>
+    <body>
+        <form method="post" action="/loginuser1/">
+            {% csrf_token %}
+            <label>user name</label>
+            <input type="text" name="username"><br><br>
+            <label>password</label>
+            <input type="text" name="password"><br><br>
+            <input type="submit" value="login">
+        </form>
+        <a href="/createuser/">create user</a>
+    </body>
+</html>

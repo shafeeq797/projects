@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            table,th,tr,td{
+                border:2px solid black;
+                border-collapse:collapse
+                
+            }
+        </style>
+        <body>
+        <table>
+            <thead>
+                <th>cakename</th>
+                <th>quantity</th>
+                <th>flavour</th>
+                <th>price</th>
+            </thead>
+            <tbody>
+                {% for x in data %}
+                <tr>
+                    <td>
+                        {{ x.cakename}}
+                    </td>
+                    <td>{{x.quantity}}</td>
+                    <td>{{x.flavour}}</td>
+                    <td>{{ x.price }}</td>
+                    <td><img src="{{ x.image }}" height="200" width="200" alt="da"></td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/back1/">back</a>
+
+    </body>
+    </head>

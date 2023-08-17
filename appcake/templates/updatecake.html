@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>cake</title>
+    </head>
+    <body>
+        <form method="post" action="/updatecake3/{{x.id}}"  enctype="multipart/form-data">
+            {% csrf_token %}
+        <label>cake name</label>
+        <input type="text" name="cakename" value="{{ x.cakename }}"><br><br>
+        <label>Quantity</label>
+        <input type="text" name="quantity" value="{{ x.quantity }}"><br><br>
+        <label>flavour</label>
+        <input type="text" name="flavour" value="{{ x.flavour }}"><br><br>
+        <label>price</label>
+        <input type="text" name="price" value="{{ x.price }}"><br><br>
+        <label>image</label>
+        <img src="{{ x.image }}" height="100px" width="150px">
+        <input type="file" name="image" value="{{ x.image }}"><br><br>
+        <input type="submit" value="add"><br><br>
+        </form>
+    </body>
+</html>

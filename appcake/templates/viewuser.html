@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+            table th,tr,td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+        <body>
+        <table>
+            <thead>
+                <th>username</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>address</th>
+            </thead>
+            {% for x in b %}
+            <tbody>
+                
+                <tr>
+                    <td>{{x.username}}</td>
+                    <td>{{x.email}}</td>
+                    <td>{{x.phone}}</td>
+                    <td>{{x.address}}</td>
+                    <td><img src="{{ x.photo }}" height="200" width="200" alt="da"></td>
+
+                    
+                    <td><a href="/deleteuser/{{x.id}}">delete</a></td>
+                    
+                </tr>
+                {% endfor %}
+                
+            </tbody>
+         </table>
+         <a href="/back/">Back</a>
+ 
+    </body>
+    </head>
+    </html>
